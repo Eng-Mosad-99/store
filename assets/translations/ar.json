@@ -1,0 +1,24 @@
+{
+    "back": "للخلف",
+    "cancel": "إلغاء",
+    "next": "التالي",
+    "get_started": "ابدأ",
+    "discover_amazing_products": "اكتشف منتجات مذهلة",
+    "displayNameEmpty": "لا يمكن أن يكون الاسم فارغًا",
+    "displayNameLength": "يجب أن يكون الاسم 3 أحرف على الأقل",
+    "emailEmpty": "لا يمكن أن يكون البريد الإلكتروني فارغًا",
+    "emailInvalid": "يرجى إدخال بريد إلكتروني صالح",
+    "phoneEmpty": "لا يمكن أن يكون رقم الهاتف فارغًا",
+    "phoneInvalid": "يرجى إدخال رقم هاتف صالح",
+    "passwordEmpty": "لا يمكن أن تكون كلمة المرور فارغة",
+    "arabic": "العربية",
+    "change_language": "تغيير اللغة",
+    "passwordLength": "يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "explore_a_wide_range_of_high_quality_items_tailored_to_your_needs":"استكشف مجموعة واسعة من المنتجات عالية الجودة المصممة لتلبية احتياجاتك."
+    ,"seamless_shopping_experience": "تجربة تسوق سلسة",
+    "enjoy_fast_secure_and_hassle_free_shopping_anytime_anywhere":"استمتع بتسوق سريع وآمن وسهل في أي وقت ومن أي مكان.",
+    "exclusive_deals_and_Rewards":"عروض حصرية ومكافآت",
+    "get_special_discounts_offers_and_rewards_just_for_you": "احصل على خصومات خاصة وعروض ومكافآت مصممة خصيصًا لك!"
+
+}

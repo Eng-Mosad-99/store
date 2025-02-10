@@ -1,0 +1,24 @@
+{
+    "back": "Back",
+    "cancel": "Cancel",
+    "next": "Next",
+    "get_started": "Get Started",
+    "change_language":"Change Language",
+    "arabic": "عربي",
+    "discover_amazing_products": "Discover Amazing Products",
+    "displayNameEmpty": "Display name cannot be empty",
+    "displayNameLength": "Display name must be at least 3 characters",
+    "emailEmpty": "Email cannot be empty",
+    "emailInvalid": "Please enter a valid email address",
+    "phoneEmpty": "Phone number cannot be empty",
+    "phoneInvalid": "Please enter a valid phone number",
+    "passwordEmpty": "Password cannot be empty",
+    "passwordLength": "Password must be at least 6 characters",
+    "passwordMismatch": "Passwords do not match",
+    "explore_a_wide_range_of_high_quality_items_tailored_to_your_needs":"Explore a wide range of high-quality items tailored to your needs.",
+    "seamless_shopping_experience": "Seamless Shopping Experience",
+    "enjoy_fast_secure_and_hassle_free_shopping_anytime_anywhere":"Enjoy fast, secure, and hassle-free shopping anytime, anywhere.",
+    "exclusive_deals_and_Rewards":"Exclusive Deals & Rewards",
+    "get_special_discounts_offers_and_rewards_just_for_you":"Get special discounts, offers, and rewards just for you!."
+
+}
