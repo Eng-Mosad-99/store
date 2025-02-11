@@ -31,7 +31,7 @@ class _SplashViewState extends State<SplashView> {
           context,
           isOnboarding
               ? cachedUser == true
-                  ? AppRouterName.home
+                  ? AppRouterName.dashboard
                   : AppRouterName.login
               : AppRouterName.onBoarding,
         );

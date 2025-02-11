@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:store_app/core/constants/constants.dart';
 import 'package:store_app/core/helper/app_assets.dart';
 import 'package:store_app/core/helper/app_colors.dart';
 import 'package:store_app/core/helper/app_router.dart';
 import 'package:store_app/core/helper/my_validator.dart';
 import 'package:store_app/core/widgets/custom_button.dart';
+import 'package:store_app/core/widgets/my_loading_widget.dart';
 import 'package:store_app/features/auth/data/inputs/login_inputs.dart';
 import 'package:store_app/features/auth/presentation/controller/bloc/auth_bloc.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
@@ -29,7 +31,7 @@ class _LoginViewState extends State<LoginView> {
         if (state is AuthSuccess) {
           Navigator.pushReplacementNamed(
             context,
-            AppRouterName.home,
+            AppRouterName.dashboard,
           );
         } else if (state is AuthError) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -51,13 +53,13 @@ class _LoginViewState extends State<LoginView> {
                 key: formKey,
                 child: Column(
                   children: [
-                    const Image(
-                      image: AssetImage(
-                        AppAssets.eshopImage,
+                    Padding(
+                      padding: EdgeInsets.all(30.0.sp),
+                      child: const Image(
+                        image: AssetImage(
+                          AppAssets.eshopImage,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 30.h,
                     ),
                     Align(
                       alignment: Alignment.centerLeft,
@@ -69,7 +71,7 @@ class _LoginViewState extends State<LoginView> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 24.sp,
-                              fontFamily: 'Poppins',
+                              fontFamily: AppConstants.kFontFamily,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -78,7 +80,7 @@ class _LoginViewState extends State<LoginView> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 16.sp,
-                              fontFamily: 'Poppins',
+                              fontFamily: AppConstants.kFontFamily,
                               fontWeight: FontWeight.w300,
                             ),
                           ),
@@ -91,11 +93,11 @@ class _LoginViewState extends State<LoginView> {
                     Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'Username',
+                        'Email',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.sp,
-                          fontFamily: 'Poppins',
+                          fontFamily: AppConstants.kFontFamily,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
@@ -105,7 +107,6 @@ class _LoginViewState extends State<LoginView> {
                     ),
                     CustomTextFormField(
                       keyboardType: TextInputType.emailAddress,
-                      
                       controller: emailController,
                       validator: (value) => MyValidators.emailValidator(value),
                       hntText: 'Enter your email',
@@ -120,7 +121,7 @@ class _LoginViewState extends State<LoginView> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18.sp,
-                          fontFamily: 'Poppins',
+                          fontFamily: AppConstants.kFontFamily,
                           fontWeight: FontWeight.w300,
                         ),
                       ),
@@ -156,13 +157,18 @@ class _LoginViewState extends State<LoginView> {
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(
+                            context,
+                            AppRouterName.forgetPassword,
+                          );
+                        },
                         child: Text(
                           'Forgot password?',
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: AppConstants.kFontFamily,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -172,16 +178,7 @@ class _LoginViewState extends State<LoginView> {
                       height: 40.h,
                     ),
                     state is AuthLoading
-                        ? Center(
-                            child: SizedBox(
-                              width: 10.w,
-                              height: 10.h,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 1.sp,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
+                        ? const MyLoadingWidget()
                         : CustomButton(
                             buttonText: 'Login',
                             onPressed: () {
@@ -209,7 +206,7 @@ class _LoginViewState extends State<LoginView> {
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 18.sp,
-                            fontFamily: 'Poppins',
+                            fontFamily: AppConstants.kFontFamily,
                             fontWeight: FontWeight.w300,
                           ),
                         ),
@@ -225,7 +222,7 @@ class _LoginViewState extends State<LoginView> {
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 18.sp,
-                              fontFamily: 'Poppins',
+                              fontFamily: AppConstants.kFontFamily,
                               fontWeight: FontWeight.w400,
                             ),
                           ),

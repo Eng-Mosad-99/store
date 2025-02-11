@@ -9,6 +9,7 @@ import 'package:store_app/core/service/service_locator.dart';
 import 'package:store_app/features/onboarding/model/onboarding_model.dart';
 
 import '../../../core/cache/local_cache.dart';
+import '../../../core/constants/constants.dart';
 import '../../../core/helper/app_assets.dart';
 import '../../../core/helper/app_router.dart';
 import '../../../core/widgets/change_lang_dialog.dart';
@@ -69,7 +70,7 @@ class _OnboardingViewState extends State<OnboardingView> {
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.0.w, vertical: 20.0.h),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
               GestureDetector(
@@ -88,8 +89,8 @@ class _OnboardingViewState extends State<OnboardingView> {
                   children: [
                     SvgPicture.asset(
                       AppAssets.langImage,
-                      width: 24.w,
-                      height: 24.h,
+                      width: 30.w,
+                      height: 30.h,
                     ),
                     SizedBox(
                       width: 5.w,
@@ -97,9 +98,9 @@ class _OnboardingViewState extends State<OnboardingView> {
                     Text(
                       isEn ? 'en' : 'عربي',
                       style: TextStyle(
-                        fontSize: 16.sp,
+                        fontSize: 20.sp,
                         decoration: TextDecoration.underline,
-                        fontFamily: 'Poppins',
+                        fontFamily: AppConstants.kFontFamily,
                         fontWeight: FontWeight.w600,
                         color: AppColors.blackColor,
                       ),
@@ -114,6 +115,8 @@ class _OnboardingViewState extends State<OnboardingView> {
                   itemCount: onboardingList.length,
                   itemBuilder: (context, index) {
                     return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Image.asset(
                           onboardingList[index].image,
@@ -138,6 +141,9 @@ class _OnboardingViewState extends State<OnboardingView> {
                   },
                 ),
               ),
+              SizedBox(
+                height: 20.h,
+              ),
               SmoothPageIndicator(
                 controller: _pageController,
                 count: 3,
@@ -149,7 +155,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
+                height: MediaQuery.of(context).size.height * 0.25,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -173,6 +179,9 @@ class _OnboardingViewState extends State<OnboardingView> {
                     textColor: Colors.white,
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 20.h,
               ),
             ],
           ),

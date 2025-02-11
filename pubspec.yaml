@@ -50,6 +50,7 @@ dependencies:
   dartz: ^0.10.1
   easy_logger: ^0.0.2
   smooth_page_indicator: ^1.2.0+3
+  flutter_otp_text_field: ^1.4.0+2
 
 dev_dependencies:
   flutter_test:

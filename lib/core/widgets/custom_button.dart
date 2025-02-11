@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:store_app/core/helper/app_colors.dart';
 
+import '../constants/constants.dart';
+
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
@@ -30,7 +32,7 @@ class CustomButton extends StatelessWidget {
           style: TextStyle(
             fontSize: fontSize ?? 18.sp,
             color: buttonTextColor ?? AppColors.primaryColor,
-            fontFamily: 'Poppins',
+            fontFamily: AppConstants.kFontFamily,
             fontWeight: FontWeight.w600,
           ),
         ),

@@ -26,3 +26,49 @@ final class AuthError extends AuthState {
   @override
   List<Object> get props => [message];
 }
+
+final class ForgetPasswordSuccess extends AuthState {
+  final String message;
+  const ForgetPasswordSuccess(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+final class ForgetPasswordLoading extends AuthState {}
+
+final class ForgetPasswordError extends AuthState {
+  final String error;
+
+  const ForgetPasswordError({required this.error});
+
+  @override
+  List<Object> get props => [error];
+}
+
+final class VerifyCodeSuccess extends AuthState {
+  final String message;
+  const VerifyCodeSuccess(this.message);
+
+  @override
+  List<Object> get props => [message];
+}
+
+final class VerifyCodeLoading extends AuthState {}
+
+final class VerifyCodeError extends AuthState {
+  final String error;
+
+  const VerifyCodeError({required this.error});
+
+  @override
+  List<Object> get props => [error];
+}
+
+class ResetPasswordSuccess extends AuthState {
+  final String token;
+  const ResetPasswordSuccess(this.token);
+
+  @override
+  List<Object> get props => [token];
+}
